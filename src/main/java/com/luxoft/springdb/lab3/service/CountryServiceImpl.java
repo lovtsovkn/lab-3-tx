@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 //@Repository is more convenient declaration for such a class than general @Service
 @Repository
-//@Transactional
+@Transactional
 public class CountryServiceImpl implements CountryService {
 
 	
