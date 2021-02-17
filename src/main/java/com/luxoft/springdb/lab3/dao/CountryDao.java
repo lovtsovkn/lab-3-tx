@@ -56,7 +56,7 @@ public class CountryDao extends JdbcDaoSupport {
 		for (String[] countryData : COUNTRY_INIT_DATA) {
 			String sql = LOAD_COUNTRIES_SQL + "('" + countryData[0] + "', '"
 					+ countryData[1] + "');";
-//			System.out.println(sql);
+			System.out.println(sql);
 			getJdbcTemplate().execute(sql);
 		}
 	}
@@ -65,7 +65,7 @@ public class CountryDao extends JdbcDaoSupport {
 		JdbcTemplate jdbcTemplate = getJdbcTemplate();
 
 		String sql = GET_COUNTRY_BY_CODE_NAME_SQL + codeName + "'";
-//		System.out.println(sql);
+		System.out.println(sql);
 
 		return jdbcTemplate.query(sql, COUNTRY_ROW_MAPPER).get(0);
 	}
